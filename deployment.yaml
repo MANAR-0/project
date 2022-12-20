@@ -21,7 +21,10 @@
       spec:
         containers:
           - image: megrya/webimage
-            name: nginx-container
+            name: project-image
+            imagePullPolicy: IfNotPresent
+            ports:
+              - containerPort: 80 
             resources:
               limits:
                 memory: "512Mi"
